@@ -1,4 +1,21 @@
 # 🏥 Hospital Analysis — Power BI
+## 🖼️ Dashboard Preview
+
+### Hospital Care & Health Support
+
+<img width="1431" height="809" alt="image" src="https://github.com/user-attachments/assets/75851ba1-d4e5-405c-ba4e-399f4b1ca5ee" />
+
+
+### Hospital Efficiency Overview
+
+<img width="1430" height="805" alt="image" src="https://github.com/user-attachments/assets/3633c526-2dbe-4fac-88d3-1f1488b382ae" />
+<img width="1441" height="813" alt="image" src="https://github.com/user-attachments/assets/e0cdb2e3-ac96-4888-a99d-deb0f8859a93" />
+
+
+
+### Clinical and Patient Analysis
+
+<img width="1433" height="804" alt="image" src="https://github.com/user-attachments/assets/13a78b4a-dbab-4b5c-9987-8ece84986775" />
 
 ## 📌 Project Overview
 
@@ -73,65 +90,6 @@ This dashboard focuses on clinical characteristics and patient outcomes.
 * Mortality risk
 * Clinical risk analysis
 
----
-
-## 🧮 DAX Measures
-
-Several DAX measures were created to support the analysis.
-
-```DAX
-Total Admissions =
-COUNTROWS('Fact')
-```
-
-```DAX
-Total Hospitals =
-DISTINCTCOUNT('Dim Hospital'[facility_id])
-```
-
-```DAX
-Average LOS =
-AVERAGE('Fact'[length_of_stay])
-```
-
-```DAX
-Total Costs =
-SUM('Fact'[total_costs])
-```
-
-```DAX
-Total Charges =
-SUM('Fact'[total_charges])
-```
-
-```DAX
-Surgical Admission % =
-DIVIDE(
-    [Surgical Admissions],
-    [Total Admissions],
-    0
-)
-```
-
-```DAX
-High Severity % =
-DIVIDE(
-    [High Severity Admissions],
-    [Total Admissions],
-    0
-)
-```
-
-```DAX
-Discharged Home % =
-DIVIDE(
-    [Discharged Home],
-    [Total Admissions],
-    0
-)
-```
-
----
 
 ## 🗂️ Data Model
 
@@ -209,41 +167,6 @@ One particularly important observation is that **Length of Stay increases substa
 
 ---
 
-## 🖼️ Dashboard Preview
-
-### Hospital Care & Health Support
-
-![Hospital Care](images/home-page.png)
-
-### Hospital Efficiency Overview
-
-![Hospital Efficiency Overview](images/hospital-efficiency.png)
-
-### Clinical and Patient Analysis
-
-![Clinical and Patient Analysis](images/clinical-patient-analysis.png)
-
-> Create an `images` folder in your GitHub repository and place the three dashboard screenshots inside it using these filenames.
-
----
-
-## 📁 Repository Structure
-
-```text
-Hospital-Analysis/
-│
-├── README.md
-├── Hospital_Analysis.pbix
-├── data/
-│   └── hospital_data.csv
-│
-└── images/
-    ├── home-page.png
-    ├── hospital-efficiency.png
-    └── clinical-patient-analysis.png
-```
-
----
 
 ## 💡 Skills Demonstrated
 
